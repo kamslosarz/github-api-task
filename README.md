@@ -72,5 +72,3 @@ HTTP\/1.1 200 OK
     }
 }
 ```
-Used libraries
-https://github.com/KnpLabs/php-github-api - MIT license
