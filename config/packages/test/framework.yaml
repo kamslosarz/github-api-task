@@ -1,0 +1,6 @@
+framework:
+    router:
+        strict_requirements: null
+    test: true
+    session:
+        storage_id: session.storage.mock_file
