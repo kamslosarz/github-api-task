@@ -16,9 +16,7 @@ class GithubComparator
     const GIT_NAME_PATTERN = '[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}';
 
     public function __construct(private Client $client, string $username, string $token)
-    {
-        $this->client->authenticate($username, $token, Client::AUTH_CLIENT_ID);
-    }
+    {}
 
     /**
      * @param string $firstUser

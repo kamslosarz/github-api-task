@@ -100,9 +100,6 @@ class GithubComparatorTest extends TestCase
             ->getMock();
 
         $clientMock = Mockery::mock(Client::class)
-            ->shouldReceive('authenticate')
-            ->with($username, $token, Client::AUTH_CLIENT_ID)
-            ->getMock()
             ->shouldReceive('api')
             ->with('repo')
             ->andReturn($repoMock)
@@ -136,7 +133,6 @@ class GithubComparatorTest extends TestCase
                 'total_commits' => 1,
             ]
         ], $compared);
-        $clientMock->shouldHaveReceived('authenticate')->once();
         $repoMock->shouldHaveReceived('show')->times(2);
         $repoMock->shouldHaveReceived('releases')->times(2);
         $releaseMock->shouldHaveReceived('latest')->times(2);
@@ -226,9 +222,6 @@ class GithubComparatorTest extends TestCase
             ->getMock();
 
         $clientMock = Mockery::mock(Client::class)
-            ->shouldReceive('authenticate')
-            ->with($username, $token, Client::AUTH_CLIENT_ID)
-            ->getMock()
             ->shouldReceive('api')
             ->with('repo')
             ->andReturn($repoMock)
@@ -262,7 +255,6 @@ class GithubComparatorTest extends TestCase
                 'total_commits' => 1,
             ]
         ], $compared);
-        $clientMock->shouldHaveReceived('authenticate')->once();
         $repoMock->shouldHaveReceived('show')->times(2);
         $repoMock->shouldHaveReceived('releases')->times(2);
         $releaseMock->shouldHaveReceived('latest')->times(2);

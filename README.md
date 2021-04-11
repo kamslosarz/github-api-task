@@ -3,11 +3,12 @@ Requirements
 - `Composer version 2.0.12`
 
 Configuration
-If app exceeded a api.github limits you can pass credentials for authenticated requests.
-add in .env file:
-- GITHUB_USERNAME=\<username of github account\>
-- GITHUB_SECRET=\<secret of github account\>
 
+When app exceeded a api.github limits you can pass credentials for authenticated requests.
+add in .env file:
+- GITHUB_AUTH_METHOD=\<client_id_header|access_token_header|jwt>\
+- GITHUB_USERNAME=\<git username\>
+- GITHUB_SECRET=\<github password/token\>
 
 How to run
 
